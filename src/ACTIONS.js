@@ -1,9 +1,10 @@
 import { BUG_TYPES } from './ACTION_TYPES';
 
-export const ADD_BUG = (description) => ({
+export const ADD_BUG = (description, owner) => ({
     type: BUG_TYPES.bug_added,
     payload: {
-        description
+        description,
+        owner
     }
 });
 

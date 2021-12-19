@@ -10,7 +10,8 @@ export const reducer_bugs = (state = [], action) => {
                 {
                     id: ++id,
                     description: action.payload.description,
-                    resolved: false
+                    resolved: false,
+                    owner: action.payload.owner
                 }
             ]
         case BUG_TYPES.bug_removed:

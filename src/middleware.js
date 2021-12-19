@@ -3,9 +3,9 @@ import { applyMiddleware } from 'redux';
 const logger_middleware = store => next => action => {
     console.log('dispatching: ', action);
     console.log('payload: ', action.payload);
-    console.log('store: ', store);
-    console.log('---------');
     next(action);
+    console.log('store: ', store.getState());
+    console.log('---------');
 };
 
 export const middlewares = applyMiddleware(
